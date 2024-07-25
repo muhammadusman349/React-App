@@ -36,10 +36,10 @@ const Movies = () => {
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
-            {movie.id}
-            {movie.title}
-            {movie.genre}
-            {movie.year}
+            <p>ID: {movie.id}</p>
+            <p>Title: {movie.title}</p>
+            <p>Genre: {movie.genre}</p>
+            <p>Year: {movie.year}</p>
             <button onClick={() => handleDelete(movie.id)}>Delete</button>
             <Link to={`/edit-movie/${movie.id}`}>Edit</Link>
           </li>
